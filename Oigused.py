@@ -25,20 +25,17 @@ html_template = """
 <title> Privaatsuspoliitika </title> 
 </head>
 <body>
-  <h1>Poliitika pühendanud ettevõttele - "{companyName}"</h1>
-  <p>Kontakt: {contactEmail}</p>
-  
+  <h1>Poliitika pühendanud ettevõttele - "{company_name}"</h1>
+  <p>Kontakt: {contact_email}</p>
   <h2>Millised andmed kogume?</h2>
-  <p>{dataCollectionType}</p>
-
+  <p>{data_collection_type}</p>
   <h2>Kuidas andmed kasutatakse?</h2>
-  <p>{dataUsage}</p>
-  
+  <p>{data_usage}</p>
   <h2>Kui kaua salvestame?</h2>
-  <p>{dataStorageLimit}</p>
+  <p>{data_storage_limit}</p>
   
 </body>
 </html>
  """
 
-privacy_policy = html_template.format(privacyData)
+privacy_policy = html_template.format(**privacyData)
